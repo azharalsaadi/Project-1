@@ -53,11 +53,7 @@
 
             //4-Write a C# program to find the largest number in an array of integers.
             int[] numbers = { 5, 12, 3, 19, 7, 8 };
-
-            // نفترض أن أول عنصر هو الأكبر
             int largest = numbers[0];
-
-            // نبحث في بقية المصفوفة
             for (int i = 1; i < numbers.Length; i++)
             {
                 if (numbers[i] > largest)
@@ -65,7 +61,6 @@
                     largest = numbers[i];
                 }
             }
-
             Console.WriteLine("The largest number in the array is: " + largest);
             Console.ReadKey();
 
@@ -73,17 +68,15 @@
 
 
             //5-Write a C# program to print a pattern of stars.(Square)
-            int size = 5; // حجم المربع
-
+            int size = 5; 
             for (int i = 0; i < size; i++)
             {
                 for (int j = 0; j < size; j++)
                 {
                     Console.Write("* ");
                 }
-                Console.WriteLine(); // للسطر الجديد بعد كل صف
+                Console.WriteLine(); 
             }
-
             Console.ReadKey();
 
             Console.WriteLine("----------------------------------------------------------");
@@ -92,7 +85,6 @@
             Console.Write("Enter a number: ");
             int number = int.Parse(Console.ReadLine());
             bool isPrime = true;
-
             if (number <= 1)
             {
                 isPrime = false;
@@ -117,7 +109,6 @@
             {
                 Console.WriteLine($"{number} is not a prime number.");
             }
-
             Console.ReadKey();
 
             Console.WriteLine("----------------------------------------------------------");
@@ -126,14 +117,12 @@
             Console.Write("Enter an integer: ");
             int number = int.Parse(Console.ReadLine());
             int sum = 0;
-            int temp = Math.Abs(number); // نتأكد أن العدد موجب
+            int temp = Math.Abs(number);
 
             while (temp > 0)
             {
-                sum += temp % 10; // نضيف الرقم الأخير
-                temp /= 10;       // نحذف الرقم الأخير
+                sum += temp % 10; 
             }
-
             Console.WriteLine($"The sum of the digits of {number} is: {sum}");
             Console.ReadKey();
 
@@ -143,7 +132,6 @@
             Console.Write("Enter a string: ");
             string input = Console.ReadLine();
             string reversed = "";
-
             for (int i = input.Length - 1; i >= 0; i--)
             {
                 reversed += input[i];
@@ -160,7 +148,6 @@
 
             int vowelCount = 0;
             string vowels = "aeiou";
-
             foreach (char c in input)
             {
                 if (vowels.Contains(c))
@@ -168,7 +155,6 @@
                     vowelCount++;
                 }
             }
-
             Console.WriteLine($"The number of vowels in the string is: {vowelCount}");
             Console.ReadKey();
 
@@ -176,7 +162,6 @@
 
             //10-Write a C# program to find the sum of all even numbers from 1 to 100.
             int sum = 0;
-
             for (int i = 1; i <= 100; i++)
             {
                 if (i % 2 == 0)
@@ -184,7 +169,6 @@
                     sum += i;
                 }
             }
-
             Console.WriteLine("The sum of all even numbers from 1 to 100 is: " + sum);
             Console.ReadKey();
 
@@ -193,14 +177,12 @@
             //11-Write a C# program to find the factorial of a number.
             Console.Write("Enter a number: ");
             int number = int.Parse(Console.ReadLine());
-
             int factorial = 1;
 
             for (int i = 1; i <= number; i++)
             {
                 factorial *= i;
             }
-
             Console.WriteLine($"The factorial of {number} is: {factorial}");
             Console.ReadKey();
 
@@ -209,14 +191,12 @@
 
             //12-Write a C# program to sort an array of integers in ascending order
             int[] numbers = { 5, 2, 9, 1, 5, 6 };
-
             Console.WriteLine("Original array:");
             foreach (int num in numbers)
             {
                 Console.Write(num + " ");
             }
 
-            // Sort the array in ascending order
             Array.Sort(numbers);
 
             Console.WriteLine("\n\nArray after sorting in ascending order:");
@@ -224,7 +204,6 @@
             {
                 Console.Write(num + " ");
             }
-
             Console.ReadKey();
         }
     }
